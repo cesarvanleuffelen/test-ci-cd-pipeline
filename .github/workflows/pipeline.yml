@@ -27,7 +27,4 @@ jobs:
 
       - name: Run tests
         run: mvn clean test
-        
-      - name: Run tests
-        run: mvn clean test
         working-directory: ./labflow-backend
