@@ -10,6 +10,10 @@ COPY . /app
 # Create the databases directory (the SQLite file will be mounted here)
 RUN mkdir -p /app/databases
 
+# create a .env file in the root of the app project and embed the secrets
+RUN echo "DATABASE_USERNAME=admin123" > /app/.env && \
+    echo "DATABASE_PASSWORD=admin123" >> /app/.env
+
 # Expose the port that the Spring Boot app will run on
 EXPOSE 8080
 
