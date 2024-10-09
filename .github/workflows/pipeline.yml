@@ -26,5 +26,5 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run tests
-        run: mvn clean test
+        run: mvn clean -e -X test
         working-directory: ./labflow-backend
